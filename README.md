@@ -1,11 +1,28 @@
-# Stock Analysis App
+
+# Streamlit Stock Intelligence Dashboard (No IEX Cloud)
 
 ## Setup Instructions
 
-1. Install Python: https://www.python.org/downloads/
-2. Install dependencies:
-   pip install -r requirements.txt
-3. Run the app:
-   streamlit run stock_analysis_app.py
+1. Create `.streamlit/secrets.toml` with your keys:
+```
+[api]
+fmp_key = "your_fmp_api_key"
+finnhub_key = "your_finnhub_api_key"
+openai_key = "your_openai_api_key"
+```
 
-You can deploy this app via Streamlit Cloud: https://streamlit.io/cloud
+2. Install requirements:
+```
+pip install -r requirements.txt
+```
+
+3. Run locally:
+```
+streamlit run stock_dashboard_app.py
+```
+
+4. Deploy via Streamlit Cloud and add your secrets in the Secrets Manager.
+
+## Notes
+- IEX Cloud has been fully removed.
+- Logos and company profiles are now sourced from FMP.
